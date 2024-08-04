@@ -1,0 +1,13 @@
+name: BEvis_env_1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - matplotlib=3.2.2
+  - networkx=3.1
+  - numpy=1.23.5
+  - pip=22.3.1
+  - python=3.8.0
+  - pip:
+    - pandas==1.5.1
+    - pyyaml==6.0

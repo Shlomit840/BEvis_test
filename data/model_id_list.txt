@@ -1,0 +1,15 @@
+Clostridium_fungisolvens.csv
+Dechloromonas_aromatica.csv
+Desulfomicrobium_baculatum.csv
+Geobacter_metallireducens_strain_GS-15.csv
+Geovibrio_thiophilus.csv
+Gudongella_oleilytica.csv
+Hydrogenophaga_aromaticivorans.csv
+Longilinea_sp..csv
+Magnetospirillum_magneticum.csv
+Mariniplasma_anaerobium.csv
+Methanobacterium_formicicum.csv
+Methanosarcina_acetivorans.csv
+Parabacteroides_goldsteinii.csv
+Tepidimonas_charontis.csv
+Thermincola_ferriacetica.csv

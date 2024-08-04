@@ -1,0 +1,84 @@
+# BEvis configuration 
+#
+## step_1: import packages and upload models.
+#==============================================
+# User input:
+#
+step1:
+    models_directory: './models_sbml3' # Change to sbml models directory.
+
+# step_2: prepare data for COMETS
+#==============================================
+# User input:
+#
+step2:
+    input_dir: './data/' # Change to input directory location.
+    nc: 20 #set number of days from day max
+    met_size_log_factor: 10000000
+    met_size_over_all_factor: 20
+#==============================================
+
+# step_3: preparing a dictionary of bacterium and compound (with carbon only) as key,and flux as value, for a selected day.
+#==============================================
+# uptake_of_interest:
+# Make a list of important compounds to uptake. Use model compound name format.
+# User input:
+step3:
+#day: 90 # selected day (cycle) to explore.
+    output_dir: './results/' # location of output files.
+    uptake_of_interest: ['Ethylenzene', 'Benzene', 'o-Xylene', 'Toluol']
+    secretions_of_interest: ['CO2','Methane']
+    #uptake_of_interest: ['Ethylenzene_C8H10', 'Benzene_C6H6', 'o-Xylene_C8H10', 'Toluol_C7H8']
+    #secretions_of_interest: ['CO2_CO2','Methane_CH4']
+
+# step_4: Preparing  a dictionary for bacteria biomass, and compound amount, in the selected day, for using as nodes size.
+#==============================================
+# User input:
+step4:
+    bm_factor: 1E+12 # change according node size requested.
+    met_factor: 1E+6 # change according node size requested.
+
+# step_5: define edges width, define vertical groups (layers) of bacteria and metabolites, and define color and size of nodes.
+#==============================================
+# User input:
+step5:
+# change according edges width requested. Bigger number will cause thinner arrow.
+        edges_factor_to_devide: 3
+
+# vertical groups (layers)
+
+
+# BTEX_degradors # layer 1
+
+        bac_A: ['Thermincola_ferriacetica',
+'Geobacter_metallireducens_GS-15',
+'Tepidimonas_charontis',
+'Desulfomicrobium_baculatum',
+'Dechloromonas_aromatica',
+'Hydrogenophaga_aromaticivorans',
+'Clostridium_fungisolvens',
+'Magnetospirillum_magneticum']
+
+# Fermentors layer 3
+
+        bac_B: ['Gudongella_oleilytica',
+'Parabacteroides_goldsteinii',
+'Longilinea_sp.',
+'Geovibrio_thiophilus',
+'Mariniplasma_anaerobium',
+'Dielma_fastidiosa_AF31',
+'Mesotoga_infera']
+
+# Methanogens # layer 5
+        bac_C: ['Methanobacterium_formicicum', 'Methanosarcina_acetivorans']
+
+#==============================================
+
+# step_6: create a plot
+#==============================================
+# User input:
+step6:
+    plot_filename: 'BEvis.pdf'
+
+#==============================================
+
